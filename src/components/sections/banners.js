@@ -1,21 +1,24 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Banner } from '../'
+import React from "react";
+import styled from "styled-components";
+import { Banner } from "../";
+import {mocks} from '../../constants'
 
-const StyledContainer = styled.div`
-    width: 90%;
-    max-width: 980px;
-    margin: auto;
+const StyledContainer = styled.section`
+  width: 90%;
+  max-width: 980px;
+  margin: auto;
 `;
 
 const Banners = () => {
-    return (
-        <StyledContainer>
-            <Banner />
-            <Banner />
-            <Banner />
-        </StyledContainer>
-    )
-}
+  return (
+    <StyledContainer>
+      <Banner
+        mode="square"
+        carousel-on-mobile="true"
+        items={mocks.banner2}
+      />
+    </StyledContainer>
+  );
+};
 
-export default Banners
+export default Banners;
