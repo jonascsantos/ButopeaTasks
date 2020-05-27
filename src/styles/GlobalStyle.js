@@ -28,6 +28,10 @@ const GlobalStyle = createGlobalStyle`
         text-rendering: optimizelegibility;
         -webkit-font-smoothing: antialiased;
     }
+
+    html {
+        font-size: 62.5%;
+    }
 `;
 
 export default GlobalStyle;
