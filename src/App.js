@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from './components'
+import { Header, Banners } from './components'
 import GlobalStyle from "./styles/GlobalStyle";
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
       <GlobalStyle />
 
       <Header />
+      <Banners />
 
     </div>
   );
