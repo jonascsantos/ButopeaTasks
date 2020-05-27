@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import { CardRectangleCta, CardSquareCta, CardSquare } from "./";
@@ -45,6 +45,9 @@ const StyledImg = styled.img`
 `;
 
 const CardRectangle = (props) => {
+  const [hovered, setHovered] = useState(false);
+  const toggleHover = () => setHovered(!hovered);
+
   const {
     srcSquare,
     linkSquare,
@@ -59,12 +62,16 @@ const CardRectangle = (props) => {
     <div>
       <Desktop>
         <StyledCardRectangle>
-          <StyledImgContainer>
+          <StyledImgContainer
+            onMouseEnter={toggleHover}
+            onMouseLeave={toggleHover}
+          >
             <StyledImg src={srcRectangle} alt="img" />
             <CardRectangleCta
               title={ctaTitle}
               link={ctaLink}
               button={ctaButton}
+              hovered={hovered}
             />
           </StyledImgContainer>
         </StyledCardRectangle>

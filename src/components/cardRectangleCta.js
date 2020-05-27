@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import theme from "../styles/theme";
+import CardSquareCta from "./cardSquareCta";
 const { colors } = theme;
 
 const StyledContainer = styled.div`
   width: 33.3%;
   height: 100%;
-  background-color: rgba(0,0,0,0);
   position: absolute;
   transform: translate(200%,-100%);
   display: flex;
@@ -17,10 +17,13 @@ const StyledContainer = styled.div`
   transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
-  opacity: 0;
+  
   align-content: center;
   justify-content: center;
 
+  opacity: ${(props) => (props.hovered ? 1:0)};
+  background-color: rgba(255,255,255,0.1);
+  
   &:hover {
     opacity: 1;
     background-color: rgba(255,255,255,0.1);
@@ -30,6 +33,8 @@ const StyledContainer = styled.div`
   @media screen and (max-width: 768px) {
     padding-bottom: 30px;
   }
+
+
 `;
 
 const StyledTitle = styled.p`
@@ -75,10 +80,9 @@ const CardRectangleCta = (props) => {
   let tinycolor = require("tinycolor2");
   let color = tinycolor(props.color);
   let isLight = color.getBrightness() > 220 ? true : false;
-
   return (
     <a href={props.link}>
-      <StyledContainer color={props.color}>
+      <StyledContainer hovered={props.hovered} color={props.color}>
         <StyledTitle isLight={isLight}>{props.title}</StyledTitle>
         <div>
           <StyledButton isLight={isLight}>{props.button}</StyledButton>
