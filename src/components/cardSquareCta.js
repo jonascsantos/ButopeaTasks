@@ -5,14 +5,23 @@ const { colors } = theme;
 
 const StyledContainer = styled.div`
   width: 100%;
+  height: 100%;
   background-color: ${(props) => (props.color ? props.color : colors.pink)};
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 15px;
 
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  opacity: 1;
   align-content: center;
   justify-content: center;
+
+  &:hover {
+    opacity: 0.85;
+  }
 
   @media screen and (max-width: 768px) {
     padding-bottom: 30px;

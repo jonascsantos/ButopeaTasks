@@ -6,13 +6,13 @@ const { colors } = theme;
 const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: ${colors.cyan};
   cursor: pointer;
   transition: ${theme.transition};
-
+  opacity: 1;
   box-shadow: 0px 2px 11px ${colors.boxShadow};
-
+  transform: translateZ(1px);
   &:hover {
+    opacity: 0.95;
     box-shadow: 0px 5px 20px ${colors.boxShadow};
   }
 `;
