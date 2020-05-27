@@ -5,7 +5,7 @@ const theme = {
   colors: {
     cyan: AccentCyan,
     pink: AccentPink,
-    black2: '#2c3e50',
+    black2: 'rgba(0, 0, 0, 1)',
     white: '#FFFFFF',
     whiteCloud: '#F6f6f6',
     black: 'black',

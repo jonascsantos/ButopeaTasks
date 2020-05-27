@@ -27,7 +27,7 @@ const CardRectangle = () => {
             </Desktop>
             <Mobile>
                 <CardSquare />
-                <CardSquareCta />
+                <CardSquareCta color="#FFFFFF" />
             </Mobile>
         </div>
     )
