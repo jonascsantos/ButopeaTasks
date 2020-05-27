@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import MediaQuery from "react-responsive";
 import { CardRectangle, CardSquare, CardSquareCta } from "../components";
 
 const StyledBannerContainer = styled.div`

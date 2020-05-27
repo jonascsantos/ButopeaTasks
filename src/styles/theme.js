@@ -5,9 +5,12 @@ const theme = {
   colors: {
     cyan: AccentCyan,
     pink: AccentPink,
+    black2: '#2c3e50',
     white: '#FFFFFF',
     whiteCloud: '#F6f6f6',
     black: 'black',
+    hoverButton: 'rgba(0, 0, 0, 0.1)',
+    boxShadow: 'rgba(0, 0, 0, 0.1)',
   },
 
   transition: 'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)',

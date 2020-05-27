@@ -10,8 +10,10 @@ const StyledCard = styled.div`
   cursor: pointer;
   transition: ${theme.transition};
 
+  box-shadow: 0px 2px 11px ${colors.boxShadow};
+
   &:hover {
-    transform: translateY(-2px);
+    box-shadow: 0px 5px 20px ${colors.boxShadow};
   }
 `;
 

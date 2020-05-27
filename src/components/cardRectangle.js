@@ -1,6 +1,7 @@
 import React from 'react'
 import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
+import { CardSquareCta, CardSquare } from "./";
 
 const Mobile = ({ children }) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
@@ -12,11 +13,22 @@ const Desktop = ({ children }) => {
   return isNotMobile ? children : null;
 };
 
+const StyledCardRectangle = styled.div`
+
+`;
+
+
 const CardRectangle = () => {
     return (
         <div>
-            <Desktop>Desktop or laptop</Desktop>
-            <Mobile>Mobile</Mobile>
+            <Desktop>
+                <StyledCardRectangle />
+                card rectangle
+            </Desktop>
+            <Mobile>
+                <CardSquare />
+                <CardSquareCta />
+            </Mobile>
         </div>
     )
 }
