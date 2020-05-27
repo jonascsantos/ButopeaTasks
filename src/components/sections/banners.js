@@ -14,8 +14,18 @@ const Banners = () => {
     <StyledContainer>
       <Banner
         mode="square"
+        carousel-on-mobile="false"
+        items={mocks.banner1}
+      />
+      <Banner
+        mode="square"
         carousel-on-mobile="true"
         items={mocks.banner2}
+      />
+      <Banner
+        mode="rectangle"
+        carousel-on-mobile="false"
+        items={mocks.banner3}
       />
     </StyledContainer>
   );

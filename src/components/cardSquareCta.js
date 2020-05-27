@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+
 
 const CardSquareCta = () => {
-    return (
-        <div>
-            card Square
-        </div>
-    )
-}
+  return (
+    <div>
+      cta
+    </div>
+  );
+};
 
-export default CardSquareCta
+export default CardSquareCta;
