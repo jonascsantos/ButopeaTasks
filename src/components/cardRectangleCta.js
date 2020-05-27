@@ -4,9 +4,11 @@ import theme from "../styles/theme";
 const { colors } = theme;
 
 const StyledContainer = styled.div`
-  width: 100%;
+  width: 33.3%;
   height: 100%;
-  background-color: ${(props) => (props.color ? props.color : colors.pink)};
+  background-color: rgba(0,0,0,0);
+  position: absolute;
+  transform: translate(200%,-100%);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -15,11 +17,13 @@ const StyledContainer = styled.div`
   transition-duration: 0.5s;
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
-  opacity: 1;
+  opacity: 0;
   align-content: center;
   justify-content: center;
 
   &:hover {
+    opacity: 1;
+    background-color: rgba(255,255,255,0.1);
     opacity: 0.85;
   }
 
@@ -66,7 +70,7 @@ const StyledButton = styled.button`
   }
 `;
 
-const CardSquareCta = (props) => {
+const CardRectangleCta = (props) => {
   //Check if the prop color is Light or Dark
   let tinycolor = require("tinycolor2");
   let color = tinycolor(props.color);
@@ -84,4 +88,4 @@ const CardSquareCta = (props) => {
   );
 };
 
-export default CardSquareCta;
+export default CardRectangleCta;

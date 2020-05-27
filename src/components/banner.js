@@ -48,15 +48,15 @@ class Banner extends React.Component {
       let rectangleItem = items.find((e) => e.aspectRatio === "rectangle");
 
       return (
-        <CardRectangle
-          srcSquare={squareItem.src}
-          linkSquare={squareItem.link}
-          srcRectangle={rectangleItem.src}
-          linkRectangle={rectangleItem.link}
-          ctaTitle={ctaItem.title}
-          ctaButton={ctaItem.button}
-          ctaLink={ctaItem.link}
-        />
+          <CardRectangle
+            srcSquare={squareItem.src}
+            linkSquare={squareItem.link}
+            srcRectangle={rectangleItem.src}
+            linkRectangle={rectangleItem.link}
+            ctaTitle={ctaItem.title}
+            ctaButton={ctaItem.button}
+            ctaLink={ctaItem.link}
+          />
       );
     }
 
