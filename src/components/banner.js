@@ -9,21 +9,19 @@ const StyledBannerContainer = styled.div`
 `;
 
 const Banner = (props) => {
+  const { items } = props;
 
-  const { items }= props;
-  
-  
   return (
     <StyledBannerContainer>
       {items.map((item, index) => {
-            return (
-            <div>{item.type}</div>
-            );
-          })}
-      
-     
+        return item.type === "cta" ? (
+          <CardSquareCta key={index} title={item.title} button={item.button} link={item.link}/>
+        ) : (
+          <CardSquare key={index} aspectRatio={item.aspectRatio} src={item.src} link={item.link}  />
+        );
+      })}
     </StyledBannerContainer>
   );
-};
+}
 
 export default Banner;

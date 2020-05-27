@@ -24,18 +24,20 @@ const StyledImgContainer = styled.div`
 `;
 
 const StyledImg = styled.img`
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
-const CardSquare = () => {
+const CardSquare = (props) => {
+  const { aspectRatio, src, link } = props;
+
   return (
     <StyledCard>
-      <StyledImgContainer className="image">
-        <StyledImg src="https://i.ytimg.com/vi/GykTLqODQuU/hqdefault.jpg" />
+      <StyledImgContainer>
+        <StyledImg src={src} alt="img" />
       </StyledImgContainer>
     </StyledCard>
   );
