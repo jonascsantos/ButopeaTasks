@@ -66,7 +66,10 @@ const CardRectangle = (props) => {
             onMouseEnter={toggleHover}
             onMouseLeave={toggleHover}
           >
-            <StyledImg src={srcRectangle} alt="img" />
+            <a href={linkRectangle}>
+              <StyledImg src={srcRectangle} alt="img" />
+            </a>
+
             <CardRectangleCta
               title={ctaTitle}
               link={ctaLink}

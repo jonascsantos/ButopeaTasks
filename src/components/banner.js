@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { useMediaQuery } from "react-responsive";
-
 import {
   CardRectangle,
   CardSquare,
   CardSquareCta,
   CarouselCards,
 } from "../components";
-
 import theme from "../styles/theme";
 const { colors } = theme;
+
+/*------ Styled Components -------- */
 
 const StyledBannerContainer = styled.div`
   display: grid;
@@ -20,6 +20,8 @@ const StyledBannerContainer = styled.div`
     grid-template-columns: 1fr;
   }
 `;
+
+/*- Conditional Rendering with MediaQueries -- */
 
 const Mobile = ({ children }) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
@@ -32,10 +34,12 @@ const Desktop = ({ children }) => {
 };
 
 class Banner extends React.Component {
+
   //Function to return random color from array (CTA card)
   getRandomColor() {
     let colorsCtaRandom = ["#ccc74e", "#eacb68", "#1abc9c", colors.pink];
     let randomNumber = Math.floor(Math.random() * colorsCtaRandom.length);
+    
     return colorsCtaRandom[randomNumber];
   }
 
@@ -48,15 +52,15 @@ class Banner extends React.Component {
       let rectangleItem = items.find((e) => e.aspectRatio === "rectangle");
 
       return (
-          <CardRectangle
-            srcSquare={squareItem.src}
-            linkSquare={squareItem.link}
-            srcRectangle={rectangleItem.src}
-            linkRectangle={rectangleItem.link}
-            ctaTitle={ctaItem.title}
-            ctaButton={ctaItem.button}
-            ctaLink={ctaItem.link}
-          />
+        <CardRectangle
+          srcSquare={squareItem.src}
+          linkSquare={squareItem.link}
+          srcRectangle={rectangleItem.src}
+          linkRectangle={rectangleItem.link}
+          ctaTitle={ctaItem.title}
+          ctaButton={ctaItem.button}
+          ctaLink={ctaItem.link}
+        />
       );
     }
 

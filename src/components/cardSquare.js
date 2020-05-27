@@ -34,7 +34,7 @@ const StyledImg = styled.img`
 `;
 
 const CardSquare = (props) => {
-  const { aspectRatio, src, link } = props;
+  const { src, link } = props;
 
   return (
     <a href={link}>

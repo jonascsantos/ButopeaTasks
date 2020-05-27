@@ -30,12 +30,11 @@ display: flex;
   
 `;
 
-
 const Footer = () => {
   return (
     <StyledFooter>
       <StyledContainer>
-          <StyledText>Task made with ❤ by Jonas dos Santos</StyledText>
+        <StyledText>Task made with ❤ by Jonas dos Santos</StyledText>
       </StyledContainer>
     </StyledFooter>
   );

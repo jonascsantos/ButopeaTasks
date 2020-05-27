@@ -1,9 +1,9 @@
 export { default as Header } from './header'
 export { default as Footer } from './footer'
-export { default as Banners } from './sections/banners'
-export { default as Banner } from './banner'
-export { default as CarouselCards } from './carouselCards'
-export { default as CardRectangle } from './cardRectangle'
-export { default as CardSquare } from './cardSquare'
-export { default as CardSquareCta } from './cardSquareCta'
-export { default as CardRectangleCta } from './cardRectangleCta'
+export { default as Banners } from "./sections/banners";
+export { default as Banner } from "./banner";
+export { default as CarouselCards } from "./carouselCards";
+export { default as CardRectangle } from "./cardRectangle";
+export { default as CardSquare } from "./cardSquare";
+export { default as CardSquareCta } from "./cardSquareCta";
+export { default as CardRectangleCta } from "./cardRectangleCta";
