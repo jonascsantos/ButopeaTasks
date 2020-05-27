@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import { CardSquareCta, CardSquare } from "./";
@@ -13,24 +13,31 @@ const Desktop = ({ children }) => {
   return isNotMobile ? children : null;
 };
 
-const StyledCardRectangle = styled.div`
+const StyledCardRectangle = styled.div``;
 
-`;
+const CardRectangle = (props) => {
+  const {
+    srcSquare,
+    linkSquare,
+    srcRectangle,
+    linkRectangle,
+    ctaTitle,
+    ctaButton,
+    ctaLink,
+  } = props;
 
+  return (
+    <div>
+      <Desktop>
+        <StyledCardRectangle />
+        card rectangle
+      </Desktop>
+      <Mobile>
+        <CardSquare src={srcSquare} link={linkSquare}/>
+        <CardSquareCta color="#FFFFFF" link={ctaLink} title={ctaTitle} button={ctaButton} />
+      </Mobile>
+    </div>
+  );
+};
 
-const CardRectangle = () => {
-    return (
-        <div>
-            <Desktop>
-                <StyledCardRectangle />
-                card rectangle
-            </Desktop>
-            <Mobile>
-                <CardSquare />
-                <CardSquareCta color="#FFFFFF" />
-            </Mobile>
-        </div>
-    )
-}
-
-export default CardRectangle
+export default CardRectangle;

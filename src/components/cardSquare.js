@@ -37,11 +37,13 @@ const CardSquare = (props) => {
   const { aspectRatio, src, link } = props;
 
   return (
-    <StyledCard>
-      <StyledImgContainer>
-        <StyledImg src={src} alt="img" />
-      </StyledImgContainer>
-    </StyledCard>
+    <a href={link}>
+      <StyledCard>
+        <StyledImgContainer>
+          <StyledImg src={src} alt="img" />
+        </StyledImgContainer>
+      </StyledCard>
+    </a>
   );
 };
 

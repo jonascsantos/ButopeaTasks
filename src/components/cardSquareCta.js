@@ -66,14 +66,14 @@ const CardSquareCta = (props) => {
   let isLight = color.getBrightness() > 220 ? true : false;
 
   return (
-    <StyledContainer color={props.color}>
-      <StyledTitle isLight={isLight}>
-        This is a test call to action text!
-      </StyledTitle>
-      <StyledContainerButton>
-        <StyledButton isLight={isLight}>Click me</StyledButton>
-      </StyledContainerButton>
-    </StyledContainer>
+    <a href={props.link}>
+      <StyledContainer color={props.color}>
+        <StyledTitle isLight={isLight}>{props.title}</StyledTitle>
+        <StyledContainerButton>
+          <StyledButton isLight={isLight}>{props.button}</StyledButton>
+        </StyledContainerButton>
+      </StyledContainer>
+    </a>
   );
 };
 

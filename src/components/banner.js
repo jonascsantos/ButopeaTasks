@@ -15,12 +15,7 @@ const StyledBannerContainer = styled.div`
 
 class Banner extends React.Component {
   getRandomColor() {
-    let colorsCtaRandom = [
-      "#ccc74e",
-      "#eacb68",
-      "#1abc9c",
-      colors.pink,
-    ];
+    let colorsCtaRandom = ["#ccc74e", "#eacb68", "#1abc9c", colors.pink];
     let randomNumber = Math.floor(Math.random() * colorsCtaRandom.length);
 
     return colorsCtaRandom[randomNumber];
@@ -30,10 +25,20 @@ class Banner extends React.Component {
     const { items, mode } = this.props;
 
     if (mode === "rectangle") {
+      let ctaItem = items.find((e) => e.type === "cta");
+      let squareItem = items.find((e) => e.aspectRatio === "square");
+      let rectangleItem = items.find((e) => e.aspectRatio === "rectangle");
+
       return (
-        <div>
-          <CardRectangle />
-        </div>
+        <CardRectangle
+          srcSquare={squareItem.src}
+          linkSquare={squareItem.link}
+          srcRectangle={rectangleItem.src}
+          linkRectangle={rectangleItem.link}
+          ctaTitle={ctaItem.title}
+          ctaButton={ctaItem.button}
+          ctaLink={ctaItem.link}
+        />
       );
     }
 
@@ -41,7 +46,13 @@ class Banner extends React.Component {
       <StyledBannerContainer>
         {items.map((item, index) => {
           return item.type === "cta" ? (
-            <CardSquareCta color={this.getRandomColor()} key={index} />
+            <CardSquareCta
+              color={this.getRandomColor()}
+              title={item.title}
+              button={item.button}
+              link={item.link}
+              key={index}
+            />
           ) : (
             <CardSquare
               key={index}
