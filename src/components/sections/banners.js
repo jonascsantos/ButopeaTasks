@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Banner } from "../";
-import {mocks} from '../../constants'
+import { mocks } from "../../constants";
 
 const StyledContainer = styled.section`
   width: 90%;
@@ -12,19 +12,11 @@ const StyledContainer = styled.section`
 const Banners = () => {
   return (
     <StyledContainer>
-      <Banner
-        mode="square"
-        carousel-on-mobile="false"
-        items={mocks.banner1}
-      />
-      <Banner
-        mode="square"
-        carousel-on-mobile="true"
-        items={mocks.banner2}
-      />
+      <Banner mode="square" carousel={false} items={mocks.banner1} />
+      <Banner mode="square" carousel={true} items={mocks.banner2} />
       <Banner
         mode="rectangle"
-        carousel-on-mobile="false"
+        carousel={false}
         items={mocks.banner3}
       />
     </StyledContainer>

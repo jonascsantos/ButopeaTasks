@@ -1,6 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { CardRectangle, CardSquare, CardSquareCta } from "../components";
+import { useMediaQuery } from "react-responsive";
+
+import {
+  CardRectangle,
+  CardSquare,
+  CardSquareCta,
+  CarouselCards,
+} from "../components";
+
 import theme from "../styles/theme";
 const { colors } = theme;
 
@@ -13,16 +21,26 @@ const StyledBannerContainer = styled.div`
   }
 `;
 
+const Mobile = ({ children }) => {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  return isMobile ? children : null;
+};
+
+const Desktop = ({ children }) => {
+  const isNotMobile = useMediaQuery({ minWidth: 768 });
+  return isNotMobile ? children : null;
+};
+
 class Banner extends React.Component {
+  //Function to return random color from array (CTA card)
   getRandomColor() {
     let colorsCtaRandom = ["#ccc74e", "#eacb68", "#1abc9c", colors.pink];
     let randomNumber = Math.floor(Math.random() * colorsCtaRandom.length);
-
     return colorsCtaRandom[randomNumber];
   }
 
   render() {
-    const { items, mode } = this.props;
+    const { items, mode, carousel } = this.props;
 
     if (mode === "rectangle") {
       let ctaItem = items.find((e) => e.type === "cta");
@@ -44,24 +62,53 @@ class Banner extends React.Component {
 
     return (
       <StyledBannerContainer>
-        {items.map((item, index) => {
-          return item.type === "cta" ? (
-            <CardSquareCta
-              color={this.getRandomColor()}
-              title={item.title}
-              button={item.button}
-              link={item.link}
-              key={index}
-            />
-          ) : (
-            <CardSquare
-              key={index}
-              aspectRatio={item.aspectRatio}
-              src={item.src}
-              link={item.link}
-            />
-          );
-        })}
+        {carousel ? (
+          <>
+            <Mobile>
+              <CarouselCards items={items} />
+            </Mobile>
+
+            <Desktop>
+              {items.map((item, index) => {
+                return item.type === "cta" ? (
+                  <CardSquareCta
+                    color={this.getRandomColor()}
+                    title={item.title}
+                    button={item.button}
+                    link={item.link}
+                    key={index}
+                  />
+                ) : (
+                  <CardSquare
+                    key={index}
+                    aspectRatio={item.aspectRatio}
+                    src={item.src}
+                    link={item.link}
+                  />
+                );
+              })}
+            </Desktop>
+          </>
+        ) : (
+          items.map((item, index) => {
+            return item.type === "cta" ? (
+              <CardSquareCta
+                color={this.getRandomColor()}
+                title={item.title}
+                button={item.button}
+                link={item.link}
+                key={index}
+              />
+            ) : (
+              <CardSquare
+                key={index}
+                aspectRatio={item.aspectRatio}
+                src={item.src}
+                link={item.link}
+              />
+            );
+          })
+        )}
       </StyledBannerContainer>
     );
   }
