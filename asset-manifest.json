@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/ButopeaTasks/static/js/main.bbe102d0.chunk.js",
-    "main.js.map": "/ButopeaTasks/static/js/main.bbe102d0.chunk.js.map",
+    "main.js": "/ButopeaTasks/static/js/main.af505447.chunk.js",
+    "main.js.map": "/ButopeaTasks/static/js/main.af505447.chunk.js.map",
     "runtime-main.js": "/ButopeaTasks/static/js/runtime-main.07417c7e.js",
     "runtime-main.js.map": "/ButopeaTasks/static/js/runtime-main.07417c7e.js.map",
     "static/css/2.afd40c00.chunk.css": "/ButopeaTasks/static/css/2.afd40c00.chunk.css",
-    "static/js/2.7040962b.chunk.js": "/ButopeaTasks/static/js/2.7040962b.chunk.js",
-    "static/js/2.7040962b.chunk.js.map": "/ButopeaTasks/static/js/2.7040962b.chunk.js.map",
+    "static/js/2.922c697a.chunk.js": "/ButopeaTasks/static/js/2.922c697a.chunk.js",
+    "static/js/2.922c697a.chunk.js.map": "/ButopeaTasks/static/js/2.922c697a.chunk.js.map",
     "index.html": "/ButopeaTasks/index.html",
-    "precache-manifest.8913a113cacf9a8d7e8f627b54b1715e.js": "/ButopeaTasks/precache-manifest.8913a113cacf9a8d7e8f627b54b1715e.js",
+    "precache-manifest.e9c6bca194d458e1af436cb77071c777.js": "/ButopeaTasks/precache-manifest.e9c6bca194d458e1af436cb77071c777.js",
     "service-worker.js": "/ButopeaTasks/service-worker.js",
     "static/css/2.afd40c00.chunk.css.map": "/ButopeaTasks/static/css/2.afd40c00.chunk.css.map",
-    "static/js/2.7040962b.chunk.js.LICENSE.txt": "/ButopeaTasks/static/js/2.7040962b.chunk.js.LICENSE.txt"
+    "static/js/2.922c697a.chunk.js.LICENSE.txt": "/ButopeaTasks/static/js/2.922c697a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.07417c7e.js",
     "static/css/2.afd40c00.chunk.css",
-    "static/js/2.7040962b.chunk.js",
-    "static/js/main.bbe102d0.chunk.js"
+    "static/js/2.922c697a.chunk.js",
+    "static/js/main.af505447.chunk.js"
   ]
 }
