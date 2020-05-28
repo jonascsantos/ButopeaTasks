@@ -15,7 +15,7 @@ const { colors } = theme;
 const StyledBannerContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
+  margin-bottom: 20px;
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
   }
@@ -34,12 +34,11 @@ const Desktop = ({ children }) => {
 };
 
 class Banner extends React.Component {
-
   //Function to return random color from array (CTA card)
   getRandomColor() {
     let colorsCtaRandom = ["#ccc74e", "#eacb68", "#1abc9c", colors.pink];
     let randomNumber = Math.floor(Math.random() * colorsCtaRandom.length);
-    
+
     return colorsCtaRandom[randomNumber];
   }
 
@@ -64,11 +63,20 @@ class Banner extends React.Component {
       );
     }
 
+    let ctaItem = items.filter(function (item) {
+      return item.type === "cta";
+    });
     return (
       <StyledBannerContainer>
         {carousel ? (
           <>
             <Mobile>
+              <CardSquareCta
+                color={this.getRandomColor()}
+                title={ctaItem[0].title}
+                button={ctaItem[0].button}
+                link={ctaItem[0].link}
+              />
               <CarouselCards items={items} />
             </Mobile>
 
