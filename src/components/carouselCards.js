@@ -6,6 +6,10 @@ const CarouselCards = (props) => {
   const { items } = props;
   const [width, setWidth] = useState(window.innerWidth);
 
+  let images = items.filter(function (item) {
+    return item.type === "image";
+  });
+
   useEffect(() => {
     window.addEventListener("resize", updateWidth);
     return () => window.removeEventListener("resize", updateWidth);
@@ -17,21 +21,18 @@ const CarouselCards = (props) => {
 
   const calcThumbWidth = () => {
     return (
-      -0.00008765044479330194 * width * width +
-      0.24421768707482994 * width -
-      30.531299058084773
+      width / (Object.keys(images).length + 1)
     );
   };
 
-  let images = items.filter(function (item) {
-    return item.type === "image";
-  });
+  
 
   return (
     <Carousel
       showThumbs={true}
       swipeable={true}
       showStatus={false}
+      showIndicators={false}
       emulateTouch={true}
       thumbWidth={calcThumbWidth()}
     >
