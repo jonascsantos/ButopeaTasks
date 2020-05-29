@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ButopeaTasks/precache-manifest.265ee8c23407f264d82bf81193966e88.js"
+  "/ButopeaTasks/precache-manifest.9c796b8ce794a56b4ae0ef870fbfc54b.js"
 );
 
 self.addEventListener('message', (event) => {

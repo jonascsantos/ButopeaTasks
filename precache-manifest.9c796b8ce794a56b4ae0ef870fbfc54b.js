@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "496f182c7448e30a9f5ae26c755497a4",
+    "revision": "48c00f3a5fae5128c4cd7a86d8db9590",
     "url": "/ButopeaTasks/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ButopeaTasks/static/js/2.922c697a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "19ed613d3452640e8c19",
-    "url": "/ButopeaTasks/static/js/main.6df7fda1.chunk.js"
+    "revision": "01922d50b452445de2a6",
+    "url": "/ButopeaTasks/static/js/main.dd9f95b8.chunk.js"
   },
   {
     "revision": "7802a2eaea8e4efacffd",
